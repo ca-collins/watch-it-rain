@@ -11,12 +11,20 @@ const useForm = (callback) => {
     if (e) {
       e.preventDefault();
     }
-    callback();
+    callback(inputs);
   }
 
   const handleInputChange = (e) => {
     e.persist();
     setInputs(inputs => ({...inputs, [e.target.name]: e.target.value}));
+    if (e.target.name === 'payType') {
+      clearForm()
+    }
+  }
+
+  const clearForm = () => {
+    inputs.hoursPerWeek = ''
+    inputs.payAmount = ''
   }
 
   return {
