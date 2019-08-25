@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import Header from './components/Header'
 import EarningsForm from './components/EarningsForm'
 import WatchItRain from './components/WatchItRain'
-import Clock from './components/Clock'
-import Controls from './components/Controls'
+import StopWatch from './components/StopWatch'
 
 const StyledApp = styled.div`
 `;
@@ -17,8 +16,7 @@ function App() {
       <Header />
       <EarningsForm />
       <WatchItRain />
-      <Clock />
-      <Controls />
+      <StopWatch />
     </StyledApp>
   );
 }
